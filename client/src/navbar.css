@@ -1,0 +1,28 @@
+.innerContainer {
+    margin: 0 auto;
+    position: relative;
+    width: 986px;
+    z-index: 1001;
+    zoom: 1;
+}
+
+.col362 {
+    width: 362px;
+    float: left;
+}
+
+.col145 {
+    width: 145px;
+    float: left;
+}
+
+.col229 {
+    width: 229px;
+    float: left;
+}
+
+.col105 {
+    width: 105px;
+    float: left;
+}
+

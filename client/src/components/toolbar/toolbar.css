@@ -1,0 +1,80 @@
+/* styling for the entire toolbar component*/ 
+.toolbar {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    background: #FFF;
+    color: #5b5d5b;
+    font-weight: bold;
+    line-height: 25px; /*height of the toolbar*/
+}
+
+/* styling for the populated portion of toolbar (986px)*/ 
+.inner_clearfix {
+    margin: 0 auto; /*top&bottom 0px and left&right are auto*/
+    padding-left: 17px;
+    position: relative;
+    width: 986px;
+    z-index: 1001;
+    zoom: 1;
+}
+
+/* styling the component of words on the left side of toolbar*/ 
+.related_sites {
+    float: left;
+    display: block;
+    margin: 50;
+    padding-left: 70;
+    position: absolute;
+    z-index: 10;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    background-position: 1px 7px;
+}
+
+.headerfirst {
+    background: url("https://www.autozone.com/images/common/external_link.gif") no-repeat right;
+    padding-right: 10px; /* adds padding between "find a repair shop and arrow */ 
+    display: inline; /* aligns text next to each other*/
+    padding-bottom: 0;
+    letter-spacing: 0.8px;
+}
+
+.headersecond {
+    background: url("https://www.autozone.com/images/common/external_link.gif") no-repeat right;
+    letter-spacing: 0.8px;
+    display: inline; /*displays text next to each other */
+    border-left: 1px solid #969696; /*displays the gray line */
+    padding-left: 10px; 
+    margin-left: 10px;
+    padding-right: 15px; /* padding between "professional" and array*/
+    padding-bottom: 0;
+}
+
+/* styling for login text*/ 
+.profilenav {
+    float: right;
+    display: block;
+    right: 91px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 12px;
+    color: #787878;
+    font-size: 12px;
+    border-right: 1px gray solid;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+/* styling for myzone text*/ 
+.myzone {
+    background: url("https://www.autozone.com/images/common/arrow-right-orange-sm.gif") no-repeat right;
+    float:right;
+    display: block;
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}

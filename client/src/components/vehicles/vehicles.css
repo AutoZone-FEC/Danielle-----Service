@@ -1,0 +1,18 @@
+.grid {
+    border-left: solid 1px #e5e5e5;
+    padding-left: 1.042%;
+    padding-right: 1.042%;
+    height: 103px;
+    float: left;
+    margin-top: 21px;
+}
+
+.header {
+    background: url("https://www.autozone.com/images/common/arrow-dwn-orange-sm.gif") no-repeat right;
+    padding-right: 15px; 
+    display: inline; 
+    color: #202124;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
