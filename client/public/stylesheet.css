@@ -1,0 +1,112 @@
+/* STYLING FOR CONTAINER */
+.containerMarginLeft {
+    margin-left: 0px !important;
+}
+
+/* STYLING FOR POP OVER BOX*/
+.popover {
+    background: #fff;
+    position: absolute !important;
+    top: 500px;
+    left: -90px;
+    width: 310px !important;
+    max-width: 310px !important; 
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+}
+
+.bs-popover-bottom {
+    margin-top: 70px !important;
+}
+  /* Popover Header */
+  .popover-header {
+    color: #666666;
+    font-size: 12px !important;
+    font-weight: normal;
+    border-bottom: 1px dotted #b2b4b3 !important;
+    margin: 5px 5px 10px 5px;
+    height: 125px;
+  }
+  /* Popover Body */
+  .popover-body {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    color: #231f20;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 4px !important;
+  }
+
+.hours {
+    float: right;
+    padding-right: 3px;
+}
+
+.hoursWord {
+    font-weight: bold;
+}
+
+.hoursRow {
+    padding: 2px 10px !important;
+}
+
+.footer {
+    margin-top: 20px;
+    margin-bottom: 4px;
+    margin-right: 3px !important;
+}
+
+.changeStore {
+    background-color: #F37F00;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    padding: 8px 11px 6px 4px !important;
+}
+
+.storeSpecials {
+    background-color: #F37F00;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: underline;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    padding: 8px 99px 6px 4px !important;
+}
+
+.todaysHours {
+    color: #F26100;
+    float: right;
+}
+
+.header {
+    margin-top: 3px;
+}
+
+.myStore {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    color: #231f20;
+    font-weight: bold;
+}
+
+.address {
+    line-height: 140%;
+    margin-bottom: 20px !important;
+}
+
+.directions {
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    color: #F26100;
+    text-decoration: underline;
+}
+
+.closeBox {
+    position: absolute;
+    top: 7px;
+    right: 5px;
+}

@@ -1,0 +1,54 @@
+.grid {
+    border-left: solid 1px #e5e5e5;
+    padding-left: 1.042%;
+    padding-right: 1.042%;
+    height: 103px;
+    float: left;
+    margin-top: 21px;
+}
+
+.header {
+    padding-right: 15px; 
+    display: inline; /* aligns text next to each other*/
+    color: #202124;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: Helvetica Neue, Arial, sans-serif;;
+}
+
+.image {
+    padding-left: 5px;
+    position: absolute;
+    top: 31px;
+}
+
+.address {
+    color: #666666;
+    margin-left: 10px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 7px;
+    line-height: 1;
+}
+
+.open {
+    color:#f26100;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+
+.openuntil {
+    color: #666666;
+    font-weight: normal;
+    margin-left: 10px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+

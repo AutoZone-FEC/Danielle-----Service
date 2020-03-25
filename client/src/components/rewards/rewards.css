@@ -1,0 +1,43 @@
+.grid {
+    border-left: solid 1px #e5e5e5;
+    padding-left: 1.042%;
+    padding-right: 1.042%;
+    height: 103px;
+    float: left;
+    margin-top: 21px;
+}
+
+.header {
+    color: #202124;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    line-height: 1.2;
+}
+
+.link1 {
+    color: #787878;
+    font-size: 12px;
+    text-decoration: underline;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.or {
+    color: #787878;
+    font-size: 12px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin-left: 3px;
+}
+
+.link2{
+    color: #787878;
+    font-size: 12px;
+    text-decoration: underline;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    margin-left: 3px;
+}

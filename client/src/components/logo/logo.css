@@ -1,0 +1,107 @@
+/* Adds a margin on top of the logo grid*/
+.grid {
+    margin-top: 21px;
+}
+
+/* Styles the logo*/
+.logo {
+    height: 55px;
+}
+
+/* Styles the search bar*/
+.inputbox {
+    width: 298px;
+    display: block;
+    height: 38px;
+    font-size: 14px;
+    border: 1px solid #a9aaa8;   
+    outline:none !important; /* removes the blue outline on click*/
+}
+
+/* microscope image */
+.searchicon {
+    background: url("https://www.autozone.com/images/common/search-icon.svg") no-repeat center center transparent;
+    display: block;
+    background-size: 20px 20px;
+    height: 22px;
+    width: 22px;
+    text-indent: -9999px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 260px;
+    top: 9px;
+    border: none;
+}
+
+/* search bar dropdown text styling */
+.dropdowntext {
+    color: #666666;
+    font-size: 10px; 
+    background: #fff;
+    font-family: Helvetica Neue, Arial, sans-serif;
+}
+
+/* Search suggestion text within drop down, search item one*/
+.searchSuggestion {
+    font-style: italic;
+    float: right;
+    margin-bottom: 0px;
+    /* position: absolute; */
+    /* top: 0;
+    right: 0; */
+}
+
+/* Search example text (Ex. 04 Bedazzled Wheel) */
+.searchtext {
+    color: #484848;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    z-index: -1;
+}
+
+.event_hover {
+    background-color: #666666 !important;
+    color: white !important;
+    font-weight: bold !important;
+    outline:none !important; /* removes the blue outline on click*/
+}
+
+.event_focus {
+    background-color: #666666 !important;
+    color: white !important;
+    font-weight: bold !important;
+    outline:none !important; /* removes the blue outline on click*/
+}
+
+.event {
+    background-color: white !important;
+    color: black !important;
+    font-weight: normal !important;
+    outline:none !important;
+}
+
+.dropdownList {
+    width: 298px;
+    padding: 5px;
+}
+
+/* Search example hyperlink */
+.searchexample {
+    color: #787878;
+    text-decoration: underline;
+    font-size: 10px;
+    margin-left: 4px;
+    z-index: -10;
+}
+
+.dropItemStyling {
+    width: 298px;
+}
+
+.dropdown-item {
+    width: 298px;
+}
+
