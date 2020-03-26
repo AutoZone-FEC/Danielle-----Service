@@ -2,12 +2,12 @@ import React from 'react';
 import mystore from './mystore.css'
 
 let Mystore = () => {
-
+    
     return(
         <div className={mystore.grid}>
             <div className={mystore.header}>
                 <span>My Store</span>
-                <img src="downarrow.gif" className={mystore.image}
+                <img src="downArrow.gif" className={mystore.image}
                 type="button" data-container="body" 
                 data-html="true"
                 data-toggle="popover" data-placement="bottom"

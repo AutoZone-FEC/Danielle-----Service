@@ -2,52 +2,102 @@ import React from 'react';
 import logo from './logo.css';
 import $ from "jquery";
 
-let Logo = ({showDropdown, searchingItem, searchIDs, itemSelect, searchItems, searchItemOne, inputValue}) => {
+class Logo extends React.Component{
+    // showDropdown, searchingItem, searchIDs, itemSelect, searchItems, searchItemOne, inputValue
+    constructor(props) {
+        super(props)
+        this.state = {
+            highlightItem: -1
+        }
+    }
     
-    $(document).ready(function() {
-        $("button").bind("mouseenter focusin focusout mouseleave",
-        function(event) {
-            var currentID = $( '#' + event.currentTarget.id);
-            if (event.type === "focusin") {
-                $("button").css({"background-color": "white", "color":"black", "outline":"none"})
-                currentID.css({"background-color":"#666666", "color":"white", "outline":"none"});
-            } else if (event.type ==="mouseenter") {
-                $("button").css({"background-color": "white", "color":"black", "outline":"none"})
-                currentID.css({"background-color":"#666666", "color":"white", "outline":"none"});
+    highlightItem(event) {
+        this.setState({
+            highlightItem: event.currentTarget.id
+        })
+    }
+
+    pressingDown(event) {
+        var currentHightlight = this.state.highlightItem
+        this.setState({
+            highlightItem: (Number(currentHightlight)+1).toString()
+        })
+    }
+
+    pressingKey(event) {
+        var currentHightlight = this.state.highlightItem
+        
+        if (event.key === "ArrowDown") {
+            if (Number(currentHightlight) === this.props.searchItems.length-1) {
+                this.setState({
+                    highlightItem: "0"
+                })
             } else {
-                $("button").css({"background-color": "white", "color":"black", "outline":"none"})
+                this.setState({
+                    highlightItem: (Number(currentHightlight)+1).toString()
+                })
             }
+        }
+        if (event.key === "ArrowUp") {
+            if (Number(currentHightlight) === 0) {
+                this.setState({
+                    highlightItem: (this.props.searchItems.length-1).toString()
+                })
+            } else {
+                this.setState({
+                    highlightItem: (Number(currentHightlight)-1).toString()
+                })
             }
-        )
-    }) 
-      
+        }
+    }
+
+    // refreshSearch(event) {
+    //     console.log(this.props.showDropdown)
+    //     if (this.props.showDropdown === "false") {
+    //         this.setState({
+    //             highlightItem: -1
+    //         })
+    //     }
+    // }
+
+    render() {
     return (
         <>
         <div className={logo.grid}>
             <img src="https://i.imgur.com/QTQETFB.png" className={logo.logo}></img>
-            <div className= {showDropdown ? "dropdown show" : "dropdown"}> {/* Bootstrap dropdown class*/}
+            <div className= {this.props.showDropdown ? "dropdown show" : "dropdown"}> {/* Bootstrap dropdown class*/}
                 <input 
                     type="text" className={logo.inputbox} autoComplete="off"
                     
                     placeholder="Search keyword, vehicle, part #, etc" 
-                    name="searchText" data-toggle={showDropdown ? "dropdown" : ""} 
-                    onChange={searchingItem} value={inputValue} 
+                    name="searchText" data-toggle={this.props.showDropdown ? "dropdown" : ""} 
+                    onChange={this.props.searchingItem} 
+                    value={this.props.inputValue} 
+                    onKeyDown={this.pressingKey.bind(this)}
+                    // onKeyPress={ event.key==="Enter" ? (event) => {this.props.itemSelect(event, item, index)} : ''}
                 ></input>
             
-                <div className={showDropdown ? "dropdown-menu show" : "dropdown-menu"}>
+                <div className={this.props.showDropdown ? "dropdown-menu show" : "dropdown-menu"}>
                 
-                    <span className={logo.dropdowntext}>
-                        {searchItems.map( (item, index) => ( 
-                             <button item={item} key={index} type="button"
+                    <ul className={logo.dropdowntext}>
+                        {this.props.searchItems.map( (item, index) => ( 
+                             <li item={item} key={index} type="button"
                              className={"dropdown-item"+ ' ' + logo.dropdownList}  
+                             onMouseOver={this.highlightItem.bind(this)}
+                             style={{backgroundColor:
+                                  Number(this.state.highlightItem) === index ? '#666666' : 'white',
+                                  color: Number(this.state.highlightItem) === index ? 'white' : '#666666',
+                                  fontWeight: Number(this.state.highlightItem) === index ? 'bold' : 'normal'
+                                }}
                              id ={index} 
-                             onClick={ (event) => {itemSelect(event, item, index)} }>{item}
+                             onClick={ (event) => {this.props.itemSelect(event, item, index)}}
+                             >{item}
                               {index===0 ? <p className={logo.searchSuggestion}
                                 >Search Suggestions
                                 </p> : ""}
-                             </button>
+                             </li>
                         ))}
-                    </span>
+                    </ul>
                 </div>
                 
                 <input type="submit" className={logo.searchicon}></input>
@@ -62,74 +112,26 @@ let Logo = ({showDropdown, searchingItem, searchIDs, itemSelect, searchItems, se
         </>
     )
 }
-
-
+}
 
 export default Logo;
 
 
 
-
-
-
-    
-                        /* First search item in drop down only
-                        {searchItemOne.map( (item, index) => ( 
-                            <button item={item} key={index} type="button"
-                            className={"dropdown-item"+ ' ' + logo.dropdownList
-                           }  
-                            onClick={ (event) => {itemSelect(event, item)} }>{searchItemOne}
-                                <p className={logo.searchSuggestion}
-                                >Search Suggestions
-                                </p>
-                            </button>
-                        ))} */
-
-    //     $("button").bind("mouseenter focusin focusout mouseleave", 
-    //     function(event) { 
-    //         if (event.type === "mouseenter" || event.type === "focusin") {
-    //             $(this).css("background-color", "red")
-    //         } else {
-    //            $(this).css("background-color", "yellow")
-    //         } 
-    // });
-                // var workingArray = [];
-                // workingArray.push(searchItemOne[0]+'<p class="r-10qygMYrAS8d9FvIqk5">Search Suggestions</p>')
-                // for (var item in searchItems) {
-                //     workingArray.push(searchItems[item])
-                // }
-                // console.log("test---",event.type)
-                // if (event.type === "mouseleave") {
-                //     var mouseLeaveArray = []
-                //     mouseLeaveArray.push(workingArray.indexOf(event.currentTarget.innerHTML));
-                // }
-                // console.log(mouseLeaveArray)
-                // // if (event.type === "focusin") {
-                // //     console.log(mouseLeaveArray)
-                // //     // $(nextItem).addClass(logo.event_hover)
-                // //     // event.currentTarget.innerHTML = nextItem;
-                // // }
-                // console.log(event.type, workingArray.indexOf(event.currentTarget.innerHTML))
-
-    // function() {
-            //    $(this).addClass(logo.event_hover);
-            //    $("button").removeClass(logo.event_focus);
-            //    $(this).removeClass(logo.event);
-            // }, 
-            // function() {
-            //     $(this).removeClass(logo.event_hover);
-            //     $(this).removeClass(logo.event);
-            // }, 
-
-  // $("button").on({
-        //     focusin: function() {
-        //        $(this).addClass(logo.event_focus);
-        //        $("button").removeClass(logo.event_hover);
-        //        $(this).removeClass(logo.event);
-        //     }, 
-        //     focusout: function() {
-        //         $(this).removeClass(logo.event_focus);
-        //         $(this).addClass(logo.event);
-        //      }
-        //     }
-        // )
+        // $(document).ready(function() {
+            // console.log(this.state.highlightItem)
+            // $("button").bind("mouseenter focusin focusout mouseleave",
+            // function(event) {
+            //     var currentID = $( '#' + event.currentTarget.id);
+            //     if (event.type === "focusin") {
+            //         $("button").css({"background-color": "white", "color":"black", "outline":"none"})
+            //         currentID.css({"background-color":"#666666", "color":"white", "outline":"none"});
+            //     } else if (event.type ==="mouseenter") {
+            //         $("button").css({"background-color": "white", "color":"black", "outline":"none"})
+            //         currentID.css({"background-color":"#666666", "color":"white", "outline":"none"});
+            //     } else {
+            //         $("button").css({"background-color": "white", "color":"black", "outline":"none"})
+            //     }
+            //     }
+            // )
+        // }) 
