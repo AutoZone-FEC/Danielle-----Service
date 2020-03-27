@@ -23,6 +23,7 @@ class Navbar extends React.Component{
         }
         this.searchingItem = this.searchingItem.bind(this);
         this.itemSelect = this.itemSelect.bind(this);
+        this.itemSelectedReturnKey = this.itemSelectedReturnKey.bind(this);
     }
 
     searchingItem(event) {
@@ -46,13 +47,9 @@ class Navbar extends React.Component{
             var searchedItemOne = '';
             var searchedIDOne = '';
             for (var i = 0; i< data.length; i++) {
-                // if (i === 0) {
-                //     searchedItemOne = data[0].productName;
-                //     searchedIDsObj[data[0].productName] = data[0].productID;
-                // } else {
+  
                     searchedItemsArray.push(data[i].productName);
                     searchedIDsObj[data[i].productName] = data[i].productID;
-                // }
             }
 
             this.setState({
@@ -83,6 +80,10 @@ class Navbar extends React.Component{
         })
     }
 
+    itemSelectedReturnKey(event) {
+        console.log(event)
+    }
+
     render() {
         return(
             <>
@@ -101,6 +102,7 @@ class Navbar extends React.Component{
                                 selectedID={this.state.selectedID}
                                 inputPlaceholder={this.state.inputPlaceholder}
                                 inputValue={this.state.inputValue}
+                                itemSelectedReturnKey={this.itemSelectedReturnKey}
                             />
                         </div>
                         <div className={navbar.col145}>

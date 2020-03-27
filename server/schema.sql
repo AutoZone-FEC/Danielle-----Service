@@ -11,7 +11,7 @@ CREATE TABLE products (
 
 INSERT INTO products (productName) VALUES ('cannon');
 INSERT INTO products (productName) VALUES ('wheel');
-INSERT INTO products (productName) VALUES ('cannon balls');
+INSERT INTO products (productName) VALUES ('pirate kit');
 INSERT INTO products (productName) VALUES ('flintlock');
 INSERT INTO products (productName) VALUES ('jolly roger');
 INSERT INTO products (productName) VALUES ('hook hand ');
