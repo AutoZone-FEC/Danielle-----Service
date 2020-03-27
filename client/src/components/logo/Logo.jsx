@@ -81,7 +81,6 @@ class Logo extends React.Component{
                     onClick={this.updateHighlightEvent.bind(this)}
                     value={this.props.inputValue} 
                     onKeyDown={this.pressingKey.bind(this)}
-                    onKeyPress={(event) => {this.props.itemSelectedReturnKey(event)}}
                 ></input>
             
                 <div className={this.props.showDropdown ? "dropdown-menu show" : "dropdown-menu"}>

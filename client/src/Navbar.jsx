@@ -23,7 +23,6 @@ class Navbar extends React.Component{
         }
         this.searchingItem = this.searchingItem.bind(this);
         this.itemSelect = this.itemSelect.bind(this);
-        this.itemSelectedReturnKey = this.itemSelectedReturnKey.bind(this);
     }
 
     searchingItem(event) {
@@ -80,9 +79,6 @@ class Navbar extends React.Component{
         })
     }
 
-    itemSelectedReturnKey(event) {
-        console.log(event)
-    }
 
     render() {
         return(
@@ -102,7 +98,6 @@ class Navbar extends React.Component{
                                 selectedID={this.state.selectedID}
                                 inputPlaceholder={this.state.inputPlaceholder}
                                 inputValue={this.state.inputValue}
-                                itemSelectedReturnKey={this.itemSelectedReturnKey}
                             />
                         </div>
                         <div className={navbar.col145}>

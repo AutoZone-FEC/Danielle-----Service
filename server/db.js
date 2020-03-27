@@ -13,4 +13,3 @@ db.connect();
 
 module.exports = db;
 
-// host: 'host.docker.internal',
