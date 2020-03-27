@@ -20,7 +20,6 @@ class Navbar extends React.Component{
            selectedItem: '', //product clicked on in dropdown
            selectedID: '',  //productID clicked on in dropdown
            inputValue: '',
-           startingHighlight: -1
         }
         this.searchingItem = this.searchingItem.bind(this);
         this.itemSelect = this.itemSelect.bind(this);
@@ -102,7 +101,6 @@ class Navbar extends React.Component{
                                 selectedID={this.state.selectedID}
                                 inputPlaceholder={this.state.inputPlaceholder}
                                 inputValue={this.state.inputValue}
-                                startingHighlight={this.state.startingHighlight}
                             />
                         </div>
                         <div className={navbar.col145}>

@@ -51,15 +51,6 @@ class Logo extends React.Component{
         }
     }
 
-    // refreshSearch(event) {
-    //     console.log(this.props.showDropdown)
-    //     if (this.props.showDropdown === "false") {
-    //         this.setState({
-    //             highlightItem: -1
-    //         })
-    //     }
-    // }
-
     render() {
     return (
         <>
