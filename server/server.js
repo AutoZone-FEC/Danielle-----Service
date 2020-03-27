@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"../client/public")));
 
 
-app.get('/product/:id', (req,res) => {
+app.get('/:id', (req,res) => {
     var queryStr = `select * from products where productName like '%${req.params.id}%' limit 10`;
 
     db.query(queryStr, (err, result) => {

@@ -19,7 +19,7 @@ class Navbar extends React.Component{
            showDropdown: false,
            selectedItem: '', //product clicked on in dropdown
            selectedID: '',  //productID clicked on in dropdown
-           inputValue: ''
+           inputValue: '',
         }
         this.searchingItem = this.searchingItem.bind(this);
         this.itemSelect = this.itemSelect.bind(this);
@@ -38,7 +38,7 @@ class Navbar extends React.Component{
                 inputValue: search
             })
         } else {
-        axios.get(`http://localhost:8081/product/${search}`)
+        axios.get(`http://localhost:8081/${search}`)
         .then( ( {data}) => {
             //update state with 10 product names and their corresponding product id's from the database
             var searchedItemsArray = [];
@@ -79,7 +79,7 @@ class Navbar extends React.Component{
             searchIDs: [],
             emptySearch: true,
             showDropdown: false,
-            inputValue: ''
+            inputValue: '',
         })
     }
 

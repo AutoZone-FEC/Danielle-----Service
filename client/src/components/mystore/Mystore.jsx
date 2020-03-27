@@ -7,7 +7,7 @@ let Mystore = () => {
         <div className={mystore.grid}>
             <div className={mystore.header}>
                 <span>My Store</span>
-                <img src="downarrow.gif" className={mystore.image}
+                <img src="images/downArrow.gif" className={mystore.image}
                 type="button" data-container="body" 
                 data-html="true"
                 data-toggle="popover" data-placement="bottom"
