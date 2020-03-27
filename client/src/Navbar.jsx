@@ -46,13 +46,9 @@ class Navbar extends React.Component{
             var searchedItemOne = '';
             var searchedIDOne = '';
             for (var i = 0; i< data.length; i++) {
-                // if (i === 0) {
-                //     searchedItemOne = data[0].productName;
-                //     searchedIDsObj[data[0].productName] = data[0].productID;
-                // } else {
+  
                     searchedItemsArray.push(data[i].productName);
                     searchedIDsObj[data[i].productName] = data[i].productID;
-                // }
             }
 
             this.setState({
@@ -82,6 +78,7 @@ class Navbar extends React.Component{
             inputValue: '',
         })
     }
+
 
     render() {
         return(

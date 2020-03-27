@@ -17,16 +17,14 @@ class Logo extends React.Component{
         })
     }
 
-    pressingDown(event) {
-        var currentHightlight = this.state.highlightItem
-        this.setState({
-            highlightItem: (Number(currentHightlight)+1).toString()
-        })
-    }
 
     pressingKey(event) {
         var currentHightlight = this.state.highlightItem
-        
+        if (this.props.showDropdown === false) {
+            this.setState({
+                highlightItem: -1
+            })
+        }
         if (event.key === "ArrowDown") {
             if (Number(currentHightlight) === this.props.searchItems.length-1) {
                 this.setState({
@@ -51,21 +49,38 @@ class Logo extends React.Component{
         }
     }
 
+    updateHighlightEvent(event) {
+        if (this.props.showDropdown === false) {
+            this.setState({
+                highlightItem: -1
+            })
+        }
+    }
+    // $(document).ready(function() {
+        
+    //     var test = $("ul").html();
+    //     console.log((test === " "))
+    //     if (test === "") {
+    //         this.setState({
+    //             highlightItem: -1
+    //         })
+    //     }
+    // })
     render() {
     return (
         <>
         <div className={logo.grid}>
             <img src="https://i.imgur.com/QTQETFB.png" className={logo.logo}></img>
-            <div className= {this.props.showDropdown ? "dropdown show" : "dropdown"}> {/* Bootstrap dropdown class*/}
+            <div className= {this.props.showDropdown ? "dropdown show" : "dropdown"}> 
                 <input 
                     type="text" className={logo.inputbox} autoComplete="off"
                     
                     placeholder="Search keyword, vehicle, part #, etc" 
                     name="searchText" data-toggle={this.props.showDropdown ? "dropdown" : ""} 
                     onChange={this.props.searchingItem} 
+                    onClick={this.updateHighlightEvent.bind(this)}
                     value={this.props.inputValue} 
                     onKeyDown={this.pressingKey.bind(this)}
-                    // onKeyPress={ event.key==="Enter" ? (event) => {this.props.itemSelect(event, item, index)} : ''}
                 ></input>
             
                 <div className={this.props.showDropdown ? "dropdown-menu show" : "dropdown-menu"}>
