@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start-oh": "webpack -d --watch & nodemon server/server.js",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/server.js",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
