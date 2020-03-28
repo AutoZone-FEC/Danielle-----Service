@@ -56,16 +56,7 @@ class Logo extends React.Component{
             })
         }
     }
-    // $(document).ready(function() {
-        
-    //     var test = $("ul").html();
-    //     console.log((test === " "))
-    //     if (test === "") {
-    //         this.setState({
-    //             highlightItem: -1
-    //         })
-    //     }
-    // })
+
     render() {
     return (
         <>

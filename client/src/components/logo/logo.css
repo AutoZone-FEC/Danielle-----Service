@@ -29,8 +29,8 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 260px;
-    top: 9px;
+    left: 270px;
+    top: 92px;
     border: none;
 }
 
@@ -44,6 +44,10 @@
     margin-inline-end: 0px !important;
     margin-block-start: 0px !important;
     margin-block-end: 0px !important;
+    z-index: 1001;
+    width: 280px;
+    list-style-type: none;
+    border: solid 1px #e5e5e5
 }
 
 /* Search suggestion text within drop down, search item one*/
@@ -51,6 +55,7 @@
     font-style: italic;
     float: right;
     margin-bottom: 0px;
+    margin-top: 0px;
     /* position: absolute; */
     /* top: 0;
     right: 0; */
@@ -88,7 +93,7 @@
 }
 
 .dropdownList {
-    width: 298px;
+    width: 270px;
     padding: 5px;
 }
 

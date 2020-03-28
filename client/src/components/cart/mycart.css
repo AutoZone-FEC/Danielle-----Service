@@ -14,6 +14,7 @@
     font-size: 12px; /* autozone's site has a smaller size font */
     font-weight: bold;
     margin-left: 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .mycartimage {
@@ -24,7 +25,7 @@
 .number {
     position: absolute;
     z-index: 1000;
-    top: 48px;
+    top: 46px;
     left: 921px;
     color: white;
     font-size: 10px;

@@ -67,6 +67,7 @@ class Navbar extends React.Component{
     }
 
     itemSelect(event, item, index) {
+        window.productID = this.state.searchIDs[item]
         this.setState({
             selectedItem: item,
             selectedID: this.state.searchIDs[item],
@@ -79,6 +80,7 @@ class Navbar extends React.Component{
         })
     }
 
+    
 
     render() {
         return(

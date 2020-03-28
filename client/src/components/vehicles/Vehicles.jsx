@@ -12,7 +12,3 @@ let Vehicles = () => {
 
 export default Vehicles;
 
-//<div className={vehicles.header}>
-{/* <img src={filename.png}><span>My Vehicles </span>
-    
-</div> */}
