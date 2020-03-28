@@ -69,6 +69,7 @@ class Navbar extends React.Component{
 
     itemSelect(item) {
         window.localStorage.setItem('productID',this.state.searchIDs[item])
+
         this.setState({
             selectedItem: item,
             selectedID: this.state.searchIDs[item],
@@ -87,7 +88,7 @@ class Navbar extends React.Component{
         })
     }
     componentDidMount() {
-        var intervalId = setInterval(this.timer.bind(this),1000)
+        setInterval(this.timer.bind(this),1000)
     }
 
     render() {
