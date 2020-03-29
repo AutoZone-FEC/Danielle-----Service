@@ -1,0 +1,11 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "dkuhn05/danielle_service"
+    },
+    "Ports": [
+      {
+        "ContainerPort": "8081"
+      }
+    ]
+  }

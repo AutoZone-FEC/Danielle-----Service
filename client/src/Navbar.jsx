@@ -69,7 +69,7 @@ class Navbar extends React.Component{
 
     itemSelect(item) {
         window.localStorage.setItem('productID',this.state.searchIDs[item])
-        window.localStorage.setItem('updated',false)
+        window.localStorage.setItem('updated',"false")
 
         this.setState({
             selectedItem: item,
