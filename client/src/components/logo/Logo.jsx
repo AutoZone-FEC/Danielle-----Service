@@ -56,16 +56,7 @@ class Logo extends React.Component{
             })
         }
     }
-    // $(document).ready(function() {
-        
-    //     var test = $("ul").html();
-    //     console.log((test === " "))
-    //     if (test === "") {
-    //         this.setState({
-    //             highlightItem: -1
-    //         })
-    //     }
-    // })
+
     render() {
     return (
         <>
@@ -96,7 +87,7 @@ class Logo extends React.Component{
                                   fontWeight: Number(this.state.highlightItem) === index ? 'bold' : 'normal'
                                 }}
                              id ={index} 
-                             onClick={ (event) => {this.props.itemSelect(event, item, index)}}
+                             onClick={ (event) => {this.props.itemSelect(item)}}
                              >{item}
                               {index===0 ? <p className={logo.searchSuggestion}
                                 >Search Suggestions

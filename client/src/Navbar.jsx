@@ -17,9 +17,10 @@ class Navbar extends React.Component{
            searchIDs: {}, //object with all 10 (or less searched products and product numbers)
            emptySearch: true,
            showDropdown: false,
-           selectedItem: '', //product clicked on in dropdown
-           selectedID: '',  //productID clicked on in dropdown
+           selectedItem: "cannon", //product clicked on in dropdown
+           selectedID: 1,  //productID clicked on in dropdown
            inputValue: '',
+           count: '',
         }
         this.searchingItem = this.searchingItem.bind(this);
         this.itemSelect = this.itemSelect.bind(this);
@@ -35,7 +36,7 @@ class Navbar extends React.Component{
                 searchIDs: [],
                 emptySearch: true,
                 showDropdown: false,
-                inputValue: search
+                inputValue: search,
             })
         } else {
         axios.get(`http://localhost:8081/${search}`)
@@ -66,7 +67,10 @@ class Navbar extends React.Component{
     }
     }
 
-    itemSelect(event, item, index) {
+    itemSelect(item) {
+        window.localStorage.setItem('productID',this.state.searchIDs[item])
+        window.localStorage.setItem('updated',false)
+
         this.setState({
             selectedItem: item,
             selectedID: this.state.searchIDs[item],
@@ -79,6 +83,14 @@ class Navbar extends React.Component{
         })
     }
 
+    timer() {
+        this.setState({
+            count: window.localStorage.getItem('count')
+        })
+    }
+    componentDidMount() {
+        setInterval(this.timer.bind(this),1000)
+    }
 
     render() {
         return(
@@ -110,7 +122,9 @@ class Navbar extends React.Component{
                             <Rewards/>
                         </div>
                         <div className={navbar.col105}>
-                            <Mycart/>        
+                            <Mycart
+                                count={this.state.count}
+                            />        
                         </div>
                     </div> 
                 </div>     

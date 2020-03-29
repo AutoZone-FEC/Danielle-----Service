@@ -19,12 +19,15 @@
 }
   /* Popover Header */
   .popover-header {
+    background-color: #f7f7f7;
     color: #666666;
     font-size: 12px !important;
     font-weight: normal;
     border-bottom: 1px dotted #b2b4b3 !important;
     margin: 5px 5px 10px 5px;
-    height: 125px;
+    height: 105px;
+    padding: 8px 12px;
+    font-family: Helvetica Neue, Arial, sans-serif;
   }
   /* Popover Body */
   .popover-body {
