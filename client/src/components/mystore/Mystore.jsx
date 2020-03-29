@@ -6,7 +6,7 @@ let Mystore = () => {
     return(
         <div className={mystore.grid}>
             <div className={mystore.header}>
-                <span>My Store</span>
+                <span className={mystore.mystore}>My Store</span>
                 <img src="https://www.autozone.com/images/common/arrow-dwn-orange-sm.gif" className={mystore.image}
                 type="button" data-container="body" 
                 data-html="true"
