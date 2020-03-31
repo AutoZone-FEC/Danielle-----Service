@@ -48,6 +48,7 @@
     list-style-type: none;
     border: solid 1px #e5e5e5;
     position: absolute; 
+    width: 270px;
 }
 /* 
 .dropdownFeatures {
@@ -98,7 +99,7 @@
 }
 
 .dropdownList {
-    width: 270px;
+    /* width: 270px; */
     padding: 5px;
 }
 
