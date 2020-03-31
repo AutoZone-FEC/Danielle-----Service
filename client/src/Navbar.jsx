@@ -39,7 +39,7 @@ class Navbar extends React.Component{
                 inputValue: search,
             })
         } else {
-        axios.get(`http://localhost:8081/${search}`)
+        axios.get(`http://danielleservice-env.eba-kfkmxskm.us-east-2.elasticbeanstalk.com/${search}`)
         .then( ( {data}) => {
             //update state with 10 product names and their corresponding product id's from the database
             var searchedItemsArray = [];
@@ -69,7 +69,7 @@ class Navbar extends React.Component{
 
     itemSelect(item) {
         window.localStorage.setItem('productID',this.state.searchIDs[item])
-        window.localStorage.setItem('updated',false)
+        window.localStorage.setItem('updated',"false")
 
         this.setState({
             selectedItem: item,
@@ -89,6 +89,10 @@ class Navbar extends React.Component{
         })
     }
     componentDidMount() {
+        count: window.localStorage.setItem('count',"")
+        this.setState({
+            count: window.localStorage.getItem('count')
+        })
         setInterval(this.timer.bind(this),1000)
     }
 

@@ -45,13 +45,17 @@
     margin-block-start: 0px !important;
     margin-block-end: 0px !important;
     z-index: 1001;
-    width: 280px;
     list-style-type: none;
     border: solid 1px #e5e5e5;
     position: absolute; 
 }
+/* 
+.dropdownFeatures {
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px !important;
+} */
 
-/* Search suggestion text within drop down, search item one*/
 .searchSuggestion {
     font-style: italic;
     float: right;
