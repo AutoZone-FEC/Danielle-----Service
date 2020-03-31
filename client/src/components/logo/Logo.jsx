@@ -90,6 +90,11 @@ class Logo extends React.Component{
                              onClick={ (event) => {this.props.itemSelect(item)}}
                              >{item}
                               {index===0 ? <p className={logo.searchSuggestion}
+                              style={{backgroundColor:
+                                Number(this.state.highlightItem) === index ? '#666666' : 'white',
+                                color: Number(this.state.highlightItem) === index ? 'white' : '#666666',
+                                fontWeight: Number(this.state.highlightItem) === index ? 'bold' : 'normal'
+                              }}
                                 >Search Suggestions
                                 </p> : ""}
                              </li>
