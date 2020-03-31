@@ -74,7 +74,7 @@ class Logo extends React.Component{
                     onKeyDown={this.pressingKey.bind(this)}
                 ></input>
             
-                <div className={logo.dropdownFeatures + ' ' + this.props.showDropdown ? "dropdown-menu show" : "dropdown-menu"}>
+                <div>
                 
                     <ul className={logo.dropdowntext}>
                         {this.props.searchItems.map( (item, index) => ( 
@@ -90,10 +90,8 @@ class Logo extends React.Component{
                              onClick={ (event) => {this.props.itemSelect(item)}}
                              >{item}
                               {index===0 ? <p className={logo.searchSuggestion}
-                              style={{backgroundColor:
-                                Number(this.state.highlightItem) === index ? '#666666' : 'white',
-                                color: Number(this.state.highlightItem) === index ? 'white' : '#666666',
-                                fontWeight: Number(this.state.highlightItem) === index ? 'bold' : 'normal'
+                              style={{
+                                color: Number(this.state.highlightItem) === index ? 'white' : '#666666'
                               }}
                                 >Search Suggestions
                                 </p> : ""}

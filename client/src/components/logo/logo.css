@@ -49,12 +49,12 @@
     border: solid 1px #e5e5e5;
     position: absolute; 
 }
-
+/* 
 .dropdownFeatures {
   padding: 0px !important;
   margin: 0px !important;
   border: 0px !important;
-}
+} */
 
 .searchSuggestion {
     font-style: italic;
