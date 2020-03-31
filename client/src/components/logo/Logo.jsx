@@ -74,7 +74,7 @@ class Logo extends React.Component{
                     onKeyDown={this.pressingKey.bind(this)}
                 ></input>
             
-                <div className={this.props.showDropdown ? "dropdown-menu show" : "dropdown-menu"}>
+                <div className="dropdown-menu">
                 
                     <ul className={logo.dropdowntext}>
                         {this.props.searchItems.map( (item, index) => ( 

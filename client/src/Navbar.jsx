@@ -89,7 +89,10 @@ class Navbar extends React.Component{
         })
     }
     componentDidMount() {
-        window.localStorage.setItem('count',"")
+        count: window.localStorage.setItem('count',"")
+        this.setState({
+            count: window.localStorage.getItem('count')
+        })
         setInterval(this.timer.bind(this),1000)
     }
 
